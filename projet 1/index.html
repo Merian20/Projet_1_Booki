@@ -17,48 +17,59 @@
     
 </head>
 
+
 <body>
+    <header>
+        <div class="logo_reservation">
+            <img src="./images/logo/Booki.png" alt="logo de l'agence de voyage">
+        </div>
+        <div class="menu">
+            <nav class="buttons">
+                <a href="#hebergements">Hébergements</a>
+                <a href="#activites">Activités</a>
+            </nav>
+        </div>
+    </header>
     
     <div class="main-container">
         <div>
-            <header>
-                <img src="./images/logo/Booki.png" alt="logo de l'agence de voyage">
-                <div>
-                    <span a href="page2.html">Hébergements</span>
-                    <span>Activités</span>      
-                </div>
-            </header>
+            <section class="headline">
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre-ville ou en pleine nature</p>
+            </section>
+            <div class="formulaire">
+                <form id="formulaire">
+                    <button class="location" type="button">
+                        <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
+                    </button>
+                    <input type="search" placeholder="Rechercher une ville">
+                    <!-- devra être un type "submit" pour un "vrai" formulaire -->
+                    <input type="button" value="Rechercher"> 
+                </form>
+            </div>
 
 
+            <nav>
+                <ul>
+                    <div><strong>Filtres</strong></div>
+                    <div><i class="fa-solid fa-money-bill-wave"></i>Economique</div>
+                    <div><i class="fa-solid fa-person"></i>Familial</div>
+                    <div><i class="fa-solid fa-heart"></i>Romantique </div>
+                    <div><i class="fa-solid fa-fire"></i>Nos pépites </div>
 
-            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p1>En plein centre-ville ou en pleine nature</p1>
-                <div>
-                    <form>
-                        <input type="search" placeholder="Rechercher une ville">
-                        <input type="submit" value="Rechercher">
-                    </form>
-                    
-                </div>
-            <header>
-                
-                <nav>
-                    <ul>
-                        <div>Filtres</div>
-                        <div><i class="fa-solid fa-money-bill-wave"></i>Economique</div>
-                        <div><i class="fa-solid fa-person"></i>Familial</div>
-                        <div><i class="fa-solid fa-heart"></i>Romantique </div>
-                        <div><i class="fa-solid fa-fire"></i>Nos pépites </div>
-                    
-                    </ul>
-                    <p1><i class="fa-solid fa-info"></i> Plus de 500 logements sont disponibles dans cette ville</p1>
-                </nav>
-            
-            </header>
+                </ul>
+                <p1><i class="fa-solid fa-info"></i> Plus de 500 logements sont disponibles dans cette ville</p1>
+            </nav>
         </div>
+        
+        
+        
+        
+        
+        
         <main>
             <div class="hebergements-and-populaires">
-                <section class="hebergements">
+                <section class="hebergements" id="hebergements">
 
                 </section>
                 <section class="populaires">

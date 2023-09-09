@@ -5,6 +5,128 @@
     font-family: 'Raleway', sans-serif;
 }
 
+body {
+    margin: 0;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* partie header */
+.logo_reservation {
+    padding: 30px 50px;
+    
+}
+
+.logo_reservation img {
+    width:61px;
+    height: 19px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    background: white;
+    justify-content: space-between;
+}
+
+.menu > .buttons {
+    display: flex;
+    /* position: fixed; */
+    /* right: 0;
+    top: 0; */
+    width: 294px;
+    gap: 68px;
+}
+
+.menu > .buttons a {
+    padding-top: 10px;
+    transition: all .3s;
+    position: relative;
+}
+
+.menu > .buttons a:hover {
+    /* border-top: 2px solid var(--main-color); */
+    color: var(--main-color);
+}
+
+.menu > .buttons a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--main-color);
+    transition: all .2s ease-in-out;
+    transform: scaleX(0);
+}
+
+.menu > .buttons a:hover::before {
+    transform: scaleX(1);
+}
+
+/* fin partie header */
+
+
+
+
+
+.headline {
+    position: relative;
+    line-height: 10px;
+    gap: 8px;
+}
+    
+.formulaire > form{
+    display: flex;
+    height: 49px;
+}
+
+.formulaire button.location {
+    border-radius: 15px 0px 0px 15px;
+    border: none;
+    width: 50px;
+    height: 49px;
+    padding: 0;
+    text-align: center;
+}
+
+
+.formulaire button i {
+    font-size: initial;
+    color: black;
+}
+
+.formulaire input[type=search] {
+    font-weight: 700;
+    size: 18px;
+    line-height: 21.13;
+    text-align: center;
+    color: black;
+    border: 2px solid #F2F2F2; 
+}
+
+.formulaire input[type=search]:focus {
+    outline: none;
+    border-color: #D9D9D9;
+}
+
+.formulaire input[type=submit], .formulaire input[type=button] {
+    padding: 0 10px;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    background-color: #0065FC;
+    color: white;
+    font-weight: 700;
+    cursor: default;
+}
+
+
+
+
+
+
 
 
 
