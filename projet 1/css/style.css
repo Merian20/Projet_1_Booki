@@ -72,15 +72,17 @@ header {
 
 
 
-.headline {
+.headline {     /*deux phrases du haut*/
     position: relative;
     line-height: 10px;
     gap: 8px;
 }
-    
-.formulaire > form{
+     
+
+.formulaire > form{ /*fonction recherche*/
     display: flex;
     height: 49px;
+    padding: 15px 0;
 }
 
 .formulaire button.location {
@@ -119,11 +121,175 @@ header {
     background-color: #0065FC;
     color: white;
     font-weight: 700;
-    cursor: default;
+} /*fin boutons*/
+
+
+/*filtres*/
+
+nav {
+    display: flex;
+    gap: 15px;
+    width: 758px
+}
+
+nav ul{
+    height: 50px;
+    gap: 10px;
+    display: flex;
+    padding: 0;
+}
+
+nav button{
+    background-color: white;
+    display: flex;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    padding: 5px 20px;
+    gap: 10px;
+    align-items: center;
+    font-weight: 700;
+}
+
+nav button:hover{
+ background-color: #DEEBFF;
+}
+
+nav div p{
+    width: 54px;
+    height: 21px;
+    margin-top: 30px;
+}
+
+
+nav button i p{
+    margin-top: 30px;
+    width: 54px;
+    height: 21px
+}
+/*fin filtres*/
+
+
+.info-bar {
+    padding: 20px 0;
+    gap: 10px;
+    display: flex;
+}
+
+.info-bar button{
+    border: 1px solid #D9D9D9;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.info-bar i{
+    position: absolute;
+    top: 4px;
+    left: 9px;
+}
+
+.info-bar p{
+    margin: 2px;
+}
+
+/*début cards hébergements Marseille*/
+
+.hebergement_title{
+    margin: 0;
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.carre {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    /* width: 250px; 
+    gap: 30px;*/
+    flex-direction: column;
+    height: 100%;
+}
+
+.carre > img{
+    height: 100%;
+    object-fit: cover;
+    width: -webkit-fill-available;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    max-height: 124px;
 }
 
 
 
+.text > h3{
+    margin: 7px 0 3px 0;    
+}
+
+.text > p{
+   margin: 0;  
+}
+
+.text{
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+
+.hebergements-cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px 5%;
+    flex-wrap: wrap;
+}
+
+.hebergements-cards > a {
+    max-width: 30%;
+    width: 100%;
+}
+
+.etoiles{
+    margin-top: auto;
+}
+
+.afficher-plus{ /*ce que j'ai ajouté*/
+    font-size: 18px;
+    font-weight: 700;
+}
+/*fin cards hebergements*/
+
+
+/*debut activités à Marseille*/
+
+.activites{ /*ce que j'ai ajouté*/
+    background-color: #DEEBFF;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.activites-cards{
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.rectangle{
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    flex-direction: column;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
 
 
 
@@ -193,9 +359,12 @@ a {
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 30px;
     box-sizing: border-box;
+    gap: 30px;      /*obligé de rajouter trois propriétés sinon ça s'affichait mal*/ 
+    display: flex;
+    flex-direction: column;
 }
 
 /****** Hebergements ***********/
@@ -214,9 +383,17 @@ a {
     align-items: center;
 }
 
+.populaires-cards{ /*j'ai du rajouter ce block suite aux modifs au dessus sinon ça ne s'affichait plus comme avant, c'était décalé*/
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+
+
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+   
 }
 
 .populaires-cards img {
