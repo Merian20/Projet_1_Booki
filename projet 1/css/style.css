@@ -5,7 +5,12 @@
     font-family: 'Raleway', sans-serif;
 }
 
-p, h2, h3, body, .hebergement_title {
+p,
+h2,
+h3,
+h4,
+body,
+.hebergement_title {
     margin: 0;
 }
 
@@ -37,22 +42,25 @@ header {
     height: 19px;
 }
 
-.menu > .buttons {  /*hébergements & activités*/
+.menu>.buttons {
+    /*hébergements & activités*/
     display: flex;
     gap: 68px;
 }
 
-.menu > .buttons a {
+.menu>.buttons a {
     padding: 10px 0;
     transition: all .3s;
     position: relative;
 }
 
-.menu > .buttons a:hover {  /*quand la souris passe dessus*/
+.menu>.buttons a:hover {
+    /*quand la souris passe dessus*/
     color: var(--main-color);
 }
 
-.menu > .buttons a::before { /*pour la barre bleue*/
+.menu>.buttons a::before {
+    /*pour la barre bleue*/
     content: "";
     position: absolute;
     top: 0;
@@ -64,7 +72,7 @@ header {
     transform: scaleX(0);
 }
 
-.menu > .buttons a:hover::before {
+.menu>.buttons a:hover::before {
     transform: scaleX(1);
 }
 
@@ -72,7 +80,8 @@ header {
 
 /* début info-group*/
 
-#info-group { /*bloc complet*/
+#info-group {
+    /*bloc complet*/
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -145,13 +154,7 @@ nav {
     gap: 15px;
 }
 
-nav ul {
-    /* height: 50px; */
-    gap: 10px;
-    display: flex;
-    padding: 0;
-    margin: unset;
-}
+
 
 nav.nav-filters button {
     height: 50px;
@@ -173,6 +176,11 @@ nav.nav-filters p {
     margin: auto 0;
 }
 
+nav.nav-filters .filters {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
 
 nav.nav-filters button i p {
     margin-top: 30px;
@@ -226,7 +234,7 @@ nav.nav-filters button i p {
     height: 100%;
 }
 
-.carre > img {
+.carre>img {
     height: 100%;
     object-fit: cover;
     width: -webkit-fill-available;
@@ -245,7 +253,7 @@ nav.nav-filters button i p {
     max-height: 100%;
 }
 
-.text > h3 {
+.text>h3 {
     margin: 7px 0 3px 0;
 }
 
@@ -257,7 +265,7 @@ nav.nav-filters button i p {
     flex-wrap: wrap;
 }
 
-.hebergements-cards > a {
+.hebergements-cards>a {
     max-width: 30%;
     width: 100%;
 }
@@ -288,7 +296,7 @@ nav.nav-filters button i p {
     justify-content: space-between;
 }
 
-.activites-cards > a {
+.activites-cards>a {
     width: 100%;
     max-width: 22.5%;
 }
@@ -303,7 +311,7 @@ nav.nav-filters button i p {
     height: 439px;
 }
 
-.rectangle > img {
+.rectangle>img {
     height: 100%;
     max-height: 380px;
     object-fit: cover;
@@ -314,7 +322,7 @@ nav.nav-filters button i p {
     height: 59px;
 }
 
-.description > p {
+.description>h4 {
     padding: 0px 19px;
     height: 59px;
     font-weight: 700;
@@ -330,7 +338,7 @@ footer {
     gap: 30px;
 }
 
-footer > div {
+footer>div {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -354,7 +362,8 @@ footer h3 {
     color: var(--main-color);
 }
 
-.main-container, footer {
+.main-container,
+footer {
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -531,18 +540,18 @@ a {
         justify-content: center;
     }
 
-    .menu > .buttons {
+    .menu>.buttons {
         gap: unset;
         width: 100%;
     }
 
-    .menu > .buttons > a {
+    .menu>.buttons>a {
         height: 19px;
         text-align: center;
         width: 50%;
     }
 
-    .menu > .buttons a::before {
+    .menu>.buttons a::before {
         top: 100%;
     }
 
@@ -585,24 +594,16 @@ a {
         margin: auto;
     }
 
-    nav.nav-filters,
-    nav.nav-filters ul {
+    nav.nav-filters {
         width: 100%;
         flex-wrap: wrap;
-    }
-
-    nav.nav-filters {
         gap: 20px;
     }
 
-    nav.nav-filters .filters {
-        width: 100%;
-    }
 
     nav.nav-filters button {
         width: calc((100% - 10px) / 2);
     }
-
 
     .hebergements-and-populaires {
         flex-direction: column-reverse;
@@ -616,7 +617,8 @@ a {
         background-color: white;
     }
 
-    .hebergements-cards > a, .activites-cards > a {
+    .hebergements-cards>a,
+    .activites-cards>a {
         max-width: 100%;
     }
 
@@ -624,7 +626,7 @@ a {
         flex-direction: column;
     }
 
-    .populaires-cards > a {
+    .populaires-cards>a {
         width: 100%;
     }
 
@@ -651,7 +653,7 @@ a {
         padding: 30px;
     }
 
-    footer > div {
+    footer>div {
         padding: 0;
     }
 }
