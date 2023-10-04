@@ -1,56 +1,58 @@
 /****** General ***********/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
 * {
     font-family: 'Raleway', sans-serif;
 }
 
-body {
+p, h2, h3, body, .hebergement_title {
     margin: 0;
+}
+
+body {
     flex-direction: column;
     gap: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
 }
-
 
 /* partie header */
-.logo_reservation {
-    padding: 30px 50px;
-    
-}
-
-.logo_reservation img {
-    width:61px;
-    height: 19px;
-}
 
 header {
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     background: white;
     justify-content: space-between;
 }
 
-.menu > .buttons {
+.logo_reservation {
+    padding: 30px 0;
+}
+
+.logo_reservation img {
+    width: 61px;
+    height: 19px;
+}
+
+.menu > .buttons {  /*hébergements & activités*/
     display: flex;
-    /* position: fixed; */
-    /* right: 0;
-    top: 0; */
-    width: 294px;
     gap: 68px;
 }
 
 .menu > .buttons a {
-    padding-top: 10px;
+    padding: 10px 0;
     transition: all .3s;
     position: relative;
 }
 
-.menu > .buttons a:hover {
-    /* border-top: 2px solid var(--main-color); */
+.menu > .buttons a:hover {  /*quand la souris passe dessus*/
     color: var(--main-color);
 }
 
-.menu > .buttons a::before {
+.menu > .buttons a::before { /*pour la barre bleue*/
     content: "";
     position: absolute;
     top: 0;
@@ -68,24 +70,30 @@ header {
 
 /* fin partie header */
 
+/* début info-group*/
 
+#info-group { /*bloc complet*/
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
 
-
-
-.headline {     /*deux phrases du haut*/
+.headline {
+    /*deux phrases du haut*/
     position: relative;
     line-height: 10px;
     gap: 8px;
 }
-     
 
-.formulaire > form{ /*fonction recherche*/
+
+form#formulaire {
+    /*fonction recherche*/
     display: flex;
     height: 49px;
-    padding: 15px 0;
+    position: relative;
 }
 
-.formulaire button.location {
+#formulaire button.location {
     border-radius: 15px 0px 0px 15px;
     border: none;
     width: 50px;
@@ -95,33 +103,39 @@ header {
 }
 
 
-.formulaire button i {
+#formulaire button i {
     font-size: initial;
     color: black;
 }
 
-.formulaire input[type=search] {
+#formulaire input[type=search] {
     font-weight: 700;
-    size: 18px;
-    line-height: 21.13;
-    text-align: center;
+    font-size: 18px;
     color: black;
-    border: 2px solid #F2F2F2; 
+    border: 2px solid var(--main-bg-color);
+    padding-left: 20px;
 }
 
-.formulaire input[type=search]:focus {
+#formulaire input[type=search]:focus {
     outline: none;
     border-color: #D9D9D9;
 }
 
-.formulaire input[type=submit], .formulaire input[type=button] {
+#formulaire input[type=submit],
+#formulaire input[type=button] {
     padding: 0 10px;
     border-radius: 0 15px 15px 0;
     border: none;
     background-color: #0065FC;
     color: white;
     font-weight: 700;
-} /*fin boutons*/
+}
+
+#formulaire button.loupe {
+    display: none;
+}
+
+/*fin boutons*/
 
 
 /*filtres*/
@@ -129,17 +143,18 @@ header {
 nav {
     display: flex;
     gap: 15px;
-    width: 758px
 }
 
-nav ul{
-    height: 50px;
+nav ul {
+    /* height: 50px; */
     gap: 10px;
     display: flex;
     padding: 0;
+    margin: unset;
 }
 
-nav button{
+nav.nav-filters button {
+    height: 50px;
     background-color: white;
     display: flex;
     border: 2px solid #D9D9D9;
@@ -150,54 +165,53 @@ nav button{
     font-weight: 700;
 }
 
-nav button:hover{
- background-color: #DEEBFF;
+nav.nav-filters button:hover {
+    background-color: #DEEBFF;
 }
 
-nav div p{
-    width: 54px;
-    height: 21px;
-    margin-top: 30px;
+nav.nav-filters p {
+    margin: auto 0;
 }
 
 
-nav button i p{
+nav.nav-filters button i p {
     margin-top: 30px;
     width: 54px;
     height: 21px
 }
+
 /*fin filtres*/
 
 
 .info-bar {
-    padding: 20px 0;
     gap: 10px;
     display: flex;
 }
 
-.info-bar button{
+.info-bar button {
     border: 1px solid #D9D9D9;
     width: 24px;
     height: 24px;
+    min-height: 24px;
+    min-width: 24px;
     background-color: white;
     border-radius: 50%;
     position: relative;
 }
 
-.info-bar i{
+.info-bar i {
     position: absolute;
-    top: 4px;
+    top: 5px;
     left: 9px;
 }
 
-.info-bar p{
+.info-bar p {
     margin: 2px;
 }
 
 /*début cards hébergements Marseille*/
 
-.hebergement_title{
-    margin: 0;
+.hebergement_title {
     font-size: 22px;
     line-height: 25px;
 }
@@ -208,13 +222,11 @@ nav button i p{
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    /* width: 250px; 
-    gap: 30px;*/
     flex-direction: column;
     height: 100%;
 }
 
-.carre > img{
+.carre > img {
     height: 100%;
     object-fit: cover;
     width: -webkit-fill-available;
@@ -225,20 +237,16 @@ nav button i p{
 
 
 
-.text > h3{
-    margin: 7px 0 3px 0;    
-}
-
-.text > p{
-   margin: 0;  
-}
-
-.text{
+.text {
     padding: 0 15px;
     height: 100%;
     display: flex;
     flex-direction: column;
     max-height: 100%;
+}
+
+.text > h3 {
+    margin: 7px 0 3px 0;
 }
 
 
@@ -254,21 +262,20 @@ nav button i p{
     width: 100%;
 }
 
-.etoiles{
+.etoiles {
     margin-top: auto;
 }
 
-.afficher-plus{ /*ce que j'ai ajouté*/
+.afficher-plus {
     font-size: 18px;
     font-weight: 700;
 }
+
 /*fin cards hebergements*/
 
 
 /*debut activités à Marseille*/
-
-.activites{ /*ce que j'ai ajouté*/
-    background-color: #DEEBFF;
+.activites {
     border-radius: 15px;
     padding: 30px;
     gap: 30px;
@@ -276,23 +283,64 @@ nav button i p{
     flex-direction: column;
 }
 
-.activites-cards{
+.activites-cards {
     display: flex;
-    gap: 30px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.rectangle{
+.activites-cards > a {
+    width: 100%;
+    max-width: 22.5%;
+}
+
+.rectangle {
     display: flex;
     background-color: white;
     border-radius: 20px;
     flex-direction: column;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+    height: 439px;
 }
 
+.rectangle > img {
+    height: 100%;
+    max-height: 380px;
+    object-fit: cover;
+}
 
+.description {
+    width: 200px;
+    height: 59px;
+}
 
+.description > p {
+    padding: 0px 19px;
+    height: 59px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+/*début footer*/
+footer {
+    width: 100%;
+    display: flex;
+    background-color: var(--main-bg-color);
+    gap: 30px;
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
+}
+
+footer h3 {
+    font-size: 18px;
+}
 
 
 
@@ -306,16 +354,17 @@ nav button i p{
     color: var(--main-color);
 }
 
-body {
-    display: flex;
-    justify-content: center;
+.main-container, footer {
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .main-container {
     width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 a {
@@ -324,7 +373,6 @@ a {
 }
 
 .section-title {
-    margin: 0;
     font-size: 22px;
 }
 
@@ -362,7 +410,8 @@ a {
     border-radius: 15px;
     padding: 30px;
     box-sizing: border-box;
-    gap: 30px;      /*obligé de rajouter trois propriétés sinon ça s'affichait mal*/ 
+    gap: 30px;
+    /*obligé de rajouter trois propriétés sinon ça s'affichait mal*/
     display: flex;
     flex-direction: column;
 }
@@ -383,17 +432,18 @@ a {
     align-items: center;
 }
 
-.populaires-cards{ /*j'ai du rajouter ce block suite aux modifs au dessus sinon ça ne s'affichait plus comme avant, c'était décalé*/
+.populaires-cards {
+    /* j'ai dû rajouter ce bloc suite aux modifications au dessus, sinon ça ne s'affichait plus comme avant, c'était décalé */
     display: flex;
     flex-direction: column;
-    gap: 30px
+    gap: 30px;
 }
 
 
 
 .populaires-cards .card {
     display: flex;
-   
+
 }
 
 .populaires-cards img {
@@ -415,10 +465,6 @@ a {
 .populaires-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
-}
-
-.populaires-cards .card-subtitle {
-    margin: 0;
 }
 
 .populaires-cards .card-rating {
@@ -466,6 +512,146 @@ a {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    header {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .logo_reservation {
+        text-align: center;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu > .buttons {
+        gap: unset;
+        width: 100%;
+    }
+
+    .menu > .buttons > a {
+        height: 19px;
+        text-align: center;
+        width: 50%;
+    }
+
+    .menu > .buttons a::before {
+        top: 100%;
+    }
+
+    #info-group {
+        padding: 0 20px;
+    }
+
+    .headline h1 {
+        line-height: 25px;
+    }
+
+    #formulaire button.location {
+        width: 55px;
+    }
+
+    #formulaire input[type=search] {
+        width: 100%;
+        border-radius: 0 15px 15px 0;
+    }
+
+    #formulaire input[type=button] {
+        display: none;
+    }
+
+    #formulaire button.loupe {
+        display: flex;
+        border-radius: 15px;
+        width: 49px;
+        height: 100%;
+        border: 1px;
+        background: #0065FC;
+        position: absolute;
+        right: 0;
+        box-shadow: 0px 4px 4px 0px #00000040;
+
+    }
+
+    #formulaire button i {
+        color: white;
+        margin: auto;
+    }
+
+    nav.nav-filters,
+    nav.nav-filters ul {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    nav.nav-filters {
+        gap: 20px;
+    }
+
+    nav.nav-filters .filters {
+        width: 100%;
+    }
+
+    nav.nav-filters button {
+        width: calc((100% - 10px) / 2);
+    }
+
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: unset;
+    }
+
+    .hebergements-and-populaires .hebergements {
+        background-color: white;
+    }
+
+    .hebergements-cards > a, .activites-cards > a {
+        max-width: 100%;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+    }
+
+    .populaires-cards > a {
+        width: 100%;
+    }
+
+    .activites-cards {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /*.activites-cards > a {
+        max-width: 100%;
+    }*/
+
+    .activites-cards img {
+        height: 141px;
+    }
+
+    .rectangle {
+        height: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 50px;
+        padding: 30px;
+    }
+
+    footer > div {
+        padding: 0;
+    }
 }

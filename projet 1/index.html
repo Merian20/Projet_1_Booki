@@ -32,48 +32,56 @@
     </header>
     
     <div class="main-container">
-        <div>
+        <div id="info-group">
             <section class="headline">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre-ville ou en pleine nature</p>
             </section>
-            <div class="formulaire">
-                <form id="formulaire">
-                    <button class="location" type="button">
-                        <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
-                    </button>
-                    <input type="search" placeholder="Rechercher une ville">
-                    <!-- devra être un type "submit" pour un "vrai" formulaire -->
-                    <input type="button" value="Rechercher"> 
-                </form>
-            </div>
+            <!-- <div class="formulaire"> -->
+            <form id="formulaire">
+                <button class="location" type="button">
+                    <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
+                </button>
+                <input type="search" placeholder="Rechercher une ville">
+                <!-- devra être un type "submit" pour un "vrai" formulaire -->
+                <input type="button" value="Rechercher"> 
+                <button class="loupe" type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <!-- </div> -->
             
-            <div>
-                <nav>
-                    <div>
-                        <p><strong>Filtres</strong></p>
-                    </div> 
-                        <div class="filters">
-                            <ul>   
-                                <button>
-                                    <i class="fa-solid fa-money-bill-wave"></i>Économique
-                                </button>
-                                <button>
-                                    <i class="fa-solid fa-person"></i>Familial
-                                </button>
-                                <button>
-                                    <i class="fa-solid fa-heart"></i>Romantique
-                                </button>
-                                <button>
-                                    <i class="fa-solid fa-fire"></i>Nos pépites
-                                </button>
-                                
-                            </ul>
-                        </div>
-                </nav>
-                    <div class="info-bar">
-                        <button><i class="fa-solid fa-info"></i></button><p> Plus de 500 logements sont disponibles dans cette ville</p>
-                    </div>
+            <!-- <div> -->
+            <nav class="nav-filters">
+                <p>
+                    <strong>Filtres</strong>
+                </p>
+                <div class="filters">
+                    <ul> 
+                        <li>
+                        <button>
+                            <i class="fa-solid fa-money-bill-wave"></i>Économique
+                        </button>
+                        </li>
+                        <button>
+                            <i class="fa-solid fa-person"></i>Familial
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-heart"></i>Romantique
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-fire"></i>Nos pépites
+                        </button>
+                        
+                    </ul>
+                </div>
+            </nav>
+            <!-- </div> -->
+            <div class="info-bar">
+                <button>
+                    <i class="fa-solid fa-info"></i>
+                </button>
+                <p> Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
         </div>
         
@@ -263,64 +271,61 @@
                 <div class="activites-cards">
                     <a href="#">
                         <article class="rectangle">
-                            <div class="contenu-activites">
-                                <div class="images-cut">
-                                    <img src="./images/activites/reno-laithienne.jpg" alt="Vieux-Port de Marseille">
-                                </div>
-                                <div class="description">
-                                    <p>Vieux-Port</p>
-                                </div>   
-                            </div>     
+                            <img src="./images/activites/reno-laithienne.jpg" alt="Vieux-Port de Marseille">
+                            <div class="description">
+                                <p>Vieux-Port</p>
+                            </div>
                         </article>
                     </a>
                     <a href="#">
                         <article class="rectangle">
-                            <div class="contenu-activites">
-                                <div class="images-cut">
-                                    <img src="./images/activites/reno-laithienne.jpg" alt="Vieux-Port de Marseille">
-                                </div>
-                                <div class="description">
-                                    <p>Vieux-Port</p>
-                                </div>   
-                            </div>     
+                            <img src="./images/activites/paul-hermann.jpg" alt="Fort de Pomègues">
+                            <div class="description">
+                                <p>Fort de Pomègues</p>
+                            </div>   
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="rectangle">
+                            <img src="./images/activites/kilyan-sockalingum.jpg" alt="Parc National des Calanques">
+                            <div class="description">
+                                <p>Parc National des Calanques</p>
+                            </div>   
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="rectangle">
+                            <img src="./images/activites/florian-wehde.jpg" alt="Notre-Dame-de-la-Garde">
+                            <div class="description">
+                                <p>Notre-Dame-de-la-Garde</p>
+                            </div>   
                         </article>
                     </a>
                 </div>
             </section>
         </main>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <footer>
-            <div> 
-                <div>
-                    <h1>A propos</h1>
-                        <ul>Fonctionnement du site</ul>
-                        <ul>Conditions générales</ul>
-                        <ul>Données et confidentialité</ul> 
-                </div> 
-                <div>
-                    <h1>Nos hébergements</h1>
-                        <ul>Charte qualité</ul>
-                        <ul>Proposer votre hôtel</ul>
-                </div> 
-                <div>
-                    <h1>Assistance</h1>
-                        <ul>Centre d'aide</ul>
-                        <ul>Nous contacter</ul>
-                </div>         
-            </div>
-        </footer>
     </div>
+
+    <footer>
+        <div> 
+            <h3>A propos</h3>
+            <p>Fonctionnement du site</p>
+            <p>Conditions générales</p>
+            <p>Données et confidentialité</p> 
+        </div>    
+        <div>
+            <h3>Nos hébergements</h3>
+            <p>Charte qualité</p>
+            <p>Proposer votre hôtel</p>
+
+        </div>    
+        <div>  
+            <h3>Assistance</h3>
+            <p>Centre d'aide</p>
+            <p>Nous contacter</p>          
+        </div>
+    </footer>
 </body>
 
 </html>
